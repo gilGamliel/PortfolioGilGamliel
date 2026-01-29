@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ProjectDetails } from '@/components/projects';
-import { getProjectBySlug, getAllProjectSlugs, getProjectsByCategory } from '@/data';
+import { getProjectBySlug, getAllProjectSlugs, getProjectsByCategory } from '@/lib/content';
 import { ProjectCategory } from '@/types';
 
 interface ProjectPageProps {
@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { category, slug } = await params;
 
   // Validate category
-  if (category !== 'fullstack' && category !== 'apps') {
+  if (category !== 'websites' && category !== 'apps') {
     notFound();
   }
 
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     .filter((p) => p.slug !== slug)
     .slice(0, 3);
 
-  const categoryLabel = category === 'fullstack' ? 'Full-Stack Projects' : 'Mobile Apps';
+  const categoryLabel = category === 'websites' ? 'Full-Stack Projects' : 'Mobile Apps';
 
   return (
     <div className="min-h-screen">
@@ -94,7 +94,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </Link>
             </li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-900 dark:text-white font-medium truncate">
+            <li className="text-gray-900 dark:text-white font-medium truncate max-w-[200px]">
               {project.title}
             </li>
           </ol>
@@ -120,7 +120,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   href={`/projects/${relatedProject.category}/${relatedProject.slug}`}
                   className="group block p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
                 >
-                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
                     {relatedProject.title}
                   </h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">

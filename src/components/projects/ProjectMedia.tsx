@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Project, hasVideo, hasImages } from '@/types';
+import { NormalizedProject, hasVideo, hasImages } from '@/types';
 
 interface ProjectMediaProps {
-  project: Project;
+  project: NormalizedProject;
 }
 
 /**
@@ -27,10 +27,10 @@ export function ProjectMedia({ project }: ProjectMediaProps) {
   return (
     <div className="space-y-8">
       {/* Video Player */}
-      {showVideo && <VideoPlayer url={project.videoUrl!} poster={project.videoPoster} />}
+      {showVideo && project.videoUrl && <VideoPlayer url={project.videoUrl} />}
 
       {/* Image Gallery */}
-      {showImages && <ImageGallery images={project.images!} />}
+      {showImages && <ImageGallery images={project.images} />}
     </div>
   );
 }
@@ -38,12 +38,11 @@ export function ProjectMedia({ project }: ProjectMediaProps) {
 /**
  * Video player component with controls
  */
-function VideoPlayer({ url, poster }: { url: string; poster?: string }) {
+function VideoPlayer({ url }: { url: string }) {
   return (
     <div className="relative aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-lg">
       <video
         src={url}
-        poster={poster}
         controls
         playsInline
         className="absolute inset-0 w-full h-full object-contain"
@@ -57,10 +56,10 @@ function VideoPlayer({ url, poster }: { url: string; poster?: string }) {
 /**
  * Image gallery with lightbox functionality
  */
-function ImageGallery({ images }: { images: NonNullable<Project['images']> }) {
+function ImageGallery({ images }: { images: NormalizedProject['images'] }) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  if (images.length === 0) return null;
+  if (!images || images.length === 0) return null;
 
   return (
     <>
@@ -97,12 +96,6 @@ function ImageGallery({ images }: { images: NonNullable<Project['images']> }) {
                 </svg>
               </div>
             </div>
-            {/* Caption */}
-            {image.caption && (
-              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
-                <p className="text-sm text-white truncate">{image.caption}</p>
-              </div>
-            )}
           </button>
         ))}
       </div>
@@ -129,11 +122,13 @@ function Lightbox({
   onClose,
   onNavigate,
 }: {
-  images: NonNullable<Project['images']>;
+  images: NormalizedProject['images'];
   currentIndex: number;
   onClose: () => void;
   onNavigate: (index: number) => void;
 }) {
+  if (!images || images.length === 0) return null;
+  
   const currentImage = images[currentIndex];
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < images.length - 1;
@@ -247,11 +242,6 @@ function Lightbox({
           height={800}
           className="object-contain max-h-[85vh] rounded-lg"
         />
-        {currentImage.caption && (
-          <p className="absolute bottom-0 left-0 right-0 p-4 text-center text-white bg-gradient-to-t from-black/70 to-transparent rounded-b-lg">
-            {currentImage.caption}
-          </p>
-        )}
       </div>
 
       {/* Counter */}

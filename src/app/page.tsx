@@ -1,34 +1,35 @@
 import { Hero, ProjectsSection } from '@/components';
-import { getProjectsByCategory } from '@/data';
+import { getWebsiteProjects, getAppProjects } from '@/lib/content';
 
 /**
  * Homepage - displays hero section and project carousels
+ * All data is loaded from public folder JSON files
  */
 export default function HomePage() {
-  const fullstackProjects = getProjectsByCategory('fullstack');
-  const mobileProjects = getProjectsByCategory('apps');
+  const websiteProjects = getWebsiteProjects();
+  const appProjects = getAppProjects();
 
   return (
     <>
-      {/* Hero / About Section */}
+      {/* Hero / About Section - loads from myCV.json */}
       <Hero />
 
       {/* Projects Sections */}
       <div id="projects" className="scroll-mt-20">
-        {/* Full-Stack Projects */}
+        {/* Full-Stack / Website Projects */}
         <ProjectsSection
-          id="fullstack-projects"
+          id="websites-projects"
           title="Full-Stack Projects"
           subtitle="End-to-end solutions built with modern technologies"
-          projects={fullstackProjects}
+          projects={websiteProjects}
         />
 
         {/* Mobile App Projects */}
         <ProjectsSection
-          id="mobile-projects"
+          id="apps-projects"
           title="Mobile Apps"
           subtitle="Native and cross-platform mobile applications"
-          projects={mobileProjects}
+          projects={appProjects}
         />
       </div>
     </>

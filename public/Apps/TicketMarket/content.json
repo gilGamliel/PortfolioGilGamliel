@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "slug": "ticketmarket",
+    "title": "TicketMarket – Cross-Platform Mobile Ticketing Platform (iOS & Android)",
+    "subtitle": null,
+    "category": "apps",
+    "type": "mobile",
+    "shortDescription": "A production-grade cross-platform mobile ticketing application built with Expo for iOS and Android, supported by a scalable backend and admin system."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Overview",
+      "body": [
+        "TicketMarket is a production-grade, cross-platform mobile ticketing application built using Expo (React Native) for both iOS and Android, supported by a scalable backend and administrative system.",
+        "The project was designed, implemented, and deployed as a real commercial product — covering mobile clients, backend APIs, authentication, administration, and operational tooling."
+      ]
+    },
+
+    {
+      "type": "status",
+      "title": "Product Status & Strategic Decision",
+      "body": [
+        "TicketMarket was successfully built and uploaded to the app distribution pipeline (iOS & Android).",
+        "After several months of development and internal testing, the decision was made to pause and shut down the product in order to reassess long-term business strategy, market positioning, and monetization models.",
+        "This decision was intentional and strategic, not technical.",
+        "The platform architecture was designed to be re-activated in the future, following updated business and go-to-market decisions."
+      ]
+    },
+
+    {
+      "type": "vision",
+      "title": "Core Vision",
+      "body": [
+        "TicketMarket was created to serve as a full mobile-first ticket marketplace, enabling:"
+      ],
+      "bullets": [
+        "End users to browse events and securely purchase tickets",
+        "Event organizers to manage events and ticket inventory",
+        "Administrators to oversee users, events, and system integrity"
+      ],
+      "bodyEnd": [
+        "The system reflects real-world product thinking, not a demo or academic project."
+      ]
+    },
+
+    {
+      "type": "mobile_app",
+      "title": "Mobile Application (Expo – iOS & Android)",
+      "body": [
+        "The mobile app was built using Expo (React Native) to deliver a single codebase across platforms.",
+        "Key mobile capabilities:"
+      ],
+      "bullets": [
+        "iOS & Android support from a unified codebase",
+        "Secure authentication flow",
+        "Role-based access to screens",
+        "Event browsing and ticket purchasing",
+        "Ticket viewing and digital ticket access",
+        "API-driven state management",
+        "Environment-based configuration (dev / production)"
+      ],
+      "bodyEnd": [
+        "The app architecture follows production mobile standards, including authentication-aware navigation and protected routes."
+      ]
+    },
+
+    {
+      "type": "auth",
+      "title": "User Authentication & Authorization",
+      "body": [
+        "The platform includes a robust authentication and authorization system:"
+      ],
+      "sections": [
+        {
+          "subtitle": "Authentication",
+          "items": [
+            "Secure user registration and login",
+            "Token-based authentication (JWT / Firebase Auth)"
+          ]
+        },
+        {
+          "subtitle": "Role-based permissions",
+          "items": [
+            "Ticket buyers",
+            "Event organizers",
+            "Administrators"
+          ]
+        }
+      ],
+      "bullets": [
+        "Ownership validation on every sensitive operation",
+        "Backend-enforced authorization (not client-trusted)"
+      ],
+      "bodyEnd": [
+        "Security and access control were treated as core system requirements."
+      ]
+    },
+
+    {
+      "type": "user_features",
+      "title": "User Features (Ticket Buyers)",
+      "body": [
+        "End users can:"
+      ],
+      "bullets": [
+        "Create and manage accounts",
+        "Browse events",
+        "Purchase tickets",
+        "View owned tickets",
+        "Access digital / PDF ticket files",
+        "View purchase history",
+        "Manage personal data securely"
+      ],
+      "bodyEnd": [
+        "All actions are validated on both client and server sides."
+      ]
+    },
+
+    {
+      "type": "event_ticket_management",
+      "title": "Event & Ticket Management",
+      "body": [
+        "The system includes a complete event lifecycle:"
+      ],
+      "bullets": [
+        "Event creation and editing",
+        "Ticket type configuration (price, limits, availability)",
+        "Ticket inventory tracking",
+        "User-to-ticket ownership binding",
+        "Ticket status management",
+        "Secure file uploads per ticket"
+      ],
+      "bodyEnd": [
+        "Tickets are treated as secure, auditable assets, not static files."
+      ]
+    },
+
+    {
+      "type": "admin_dashboard",
+      "title": "Admin Dashboard",
+      "body": [
+        "A dedicated admin dashboard enables full operational control:"
+      ],
+      "bullets": [
+        "User management and auditing",
+        "Event moderation",
+        "Ticket monitoring",
+        "Soft-deletion and recovery",
+        "System-level oversight"
+      ],
+      "bodyEnd": [
+        "The admin system mirrors real operational tools used in commercial platforms."
+      ]
+    },
+
+    {
+      "type": "backend_architecture",
+      "title": "Backend Architecture",
+      "body": [
+        "The backend was built with a clean, scalable architecture:"
+      ],
+      "bullets": [
+        "RESTful API",
+        "Controllers / Services / Data layers",
+        "Strong entity modeling",
+        "Input validation & sanitization",
+        "Authorization checks on all endpoints",
+        "Centralized error handling",
+        "Audit-ready data models"
+      ],
+      "bodyEnd": [
+        "The architecture supports future expansion and reactivation."
+      ]
+    },
+
+    {
+      "type": "tech_stack",
+      "title": "Technologies Used",
+      "sections": [
+        {
+          "subtitle": "Mobile",
+          "items": [
+            "Expo (React Native)",
+            "TypeScript",
+            "iOS & Android deployment",
+            "Secure navigation & protected routes"
+          ]
+        },
+        {
+          "subtitle": "Backend",
+          "items": [
+            "REST API",
+            "JWT / Firebase Authentication",
+            "File upload & storage handling"
+          ]
+        },
+        {
+          "subtitle": "General",
+          "items": [
+            "Role-based authorization",
+            "Mobile-first architecture",
+            "Production-ready project structure"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "What This Project Demonstrates",
+      "body": [
+        "TicketMarket demonstrates my ability to:"
+      ],
+      "bullets": [
+        "Build and deploy a real mobile product (iOS & Android)",
+        "Design scalable backend systems",
+        "Implement secure authentication & authorization",
+        "Build admin dashboards for real operational use",
+        "Make product and business-driven decisions, including when to pause development"
+      ],
+      "bodyEnd": [
+        "This project reflects real-world software engineering and product ownership, from architecture to business strategy."
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "paused",
+    "live": false,
+    "storeDeployment": "Uploaded to iOS & Android distribution pipeline; later paused and shut down after internal testing.",
+    "notes": "Pause decision was intentional and strategic, not technical. Architecture designed for future re-activation."
+  },
+
+  "links": {
+    "website": null,
+    "github": null,
+    "appStore": null,
+    "playStore": null
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "slug": "aviran-event-seating",
+    "title": "Event Seating & RSVP Management Platform",
+    "subtitle": "Production Full-Stack System for Live Events",
+    "category": "websites",
+    "type": "fullstack",
+    "shortDescription": "A production-ready full-stack platform used to manage seating, RSVPs, and WhatsApp communication for real live events."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Overview",
+      "body": [
+        "A production-ready, full-stack web platform designed to manage event seating, guest lists, RSVP flows, and automated WhatsApp communication for weddings and large private events.",
+        "This system is actively used in production by an event-settings company, supporting real events with hundreds of guests, real operational constraints, and live on-site usage."
+      ]
+    },
+
+    {
+      "type": "real_world_usage",
+      "title": "Real-World Usage",
+      "bullets": [
+        "Deployed and running in a live production environment",
+        "Used by professional event staff during actual events",
+        "Handles real guest data, seating logistics, and time-critical messaging",
+        "Designed to remain stable under last-minute changes and on-site pressure"
+      ],
+      "body": [
+        "This is not a demo or prototype — it is a working system built for real customers."
+      ]
+    },
+
+    {
+      "type": "problem",
+      "title": "What the Platform Solves",
+      "body": [
+        "Event organizers typically struggle with tracking hundreds of guests and RSVP responses, managing table assignments without exceeding capacity, coordinating staff access without risking data corruption, and sending timely, reliable reminders and updates.",
+        "This platform replaces manual spreadsheets and messaging with a secure, centralized system built for real event operations."
+      ]
+    },
+
+    {
+      "type": "capabilities",
+      "title": "Core Capabilities",
+      "sections": [
+        {
+          "subtitle": "Event & User Management",
+          "items": [
+            "Manage multiple events with dates, locations, guarantees, and balances",
+            "Assign users to events with strict, event-scoped permissions",
+            "Role-based access including Admin with full system control, Customer with a customer-facing portal, and Event-specific users with limited access to a single event"
+          ]
+        },
+        {
+          "subtitle": "Guest & Table Management",
+          "items": [
+            "Create and manage guests and tables with enforced seat limits",
+            "Assign guests to tables with real-time over-capacity warnings",
+            "Track arrivals and attendance during the event",
+            "Import guest lists from Excel with Hebrew and English headers supported",
+            "Export Excel summaries and seating PDFs with Hebrew fonts embedded"
+          ]
+        },
+        {
+          "subtitle": "RSVP System (Guest-Facing)",
+          "items": [
+            "Unique, secure RSVP page per guest",
+            "Guests respond with Coming, Not Coming, or Not Sure",
+            "No login required for guests",
+            "Real-time RSVP statistics in the admin dashboard",
+            "RSVP links can be copied or sent directly via WhatsApp"
+          ]
+        },
+        {
+          "subtitle": "WhatsApp Automation",
+          "items": [
+            "RSVP invitations sent via WhatsApp",
+            "Automated reminders sent two hours before the event",
+            "Messages include event location and assigned table number",
+            "Filtering logic prevents duplicate or unnecessary messages",
+            "Admin test tools and manual triggers included"
+          ]
+        },
+        {
+          "subtitle": "Customer Portal",
+          "items": [
+            "Live event overview",
+            "Seating and guest visibility",
+            "Arrival tracking",
+            "Table occupancy alerts",
+            "Downloadable operational reports"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "security",
+      "title": "Security & Reliability (Production-Focused)",
+      "body": [
+        "Because this system runs in production, security and reliability were core requirements.",
+        "Role-based access control is enforced at middleware, API, and UI levels.",
+        "Event-scoped data isolation prevents cross-event access.",
+        "Field-level protections are applied for sensitive financial and staff data.",
+        "Rate limiting is enforced on authentication and write operations.",
+        "Comprehensive audit logging is implemented for all sensitive actions.",
+        "Prisma ORM is used with strict validation and parameterized queries."
+      ]
+    },
+
+    {
+      "type": "architecture",
+      "title": "Architecture & Technology",
+      "sections": [
+        {
+          "subtitle": "Frontend",
+          "items": [
+            "Next.js using the App Router",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+          ]
+        },
+        {
+          "subtitle": "Backend",
+          "items": [
+            "API-driven architecture with protected routes"
+          ]
+        },
+        {
+          "subtitle": "Database",
+          "items": [
+            "PostgreSQL",
+            "Prisma ORM"
+          ]
+        },
+        {
+          "subtitle": "Authentication",
+          "items": [
+            "Encrypted session-based authentication"
+          ]
+        },
+        {
+          "subtitle": "Messaging",
+          "items": [
+            "WhatsApp integration using Twilio / Business API"
+          ]
+        },
+        {
+          "subtitle": "Storage",
+          "items": [
+            "Cloud storage for event assets and sketches"
+          ]
+        },
+        {
+          "subtitle": "Internationalization",
+          "items": [
+            "Full right-to-left UI support for Hebrew"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "What This Project Demonstrates",
+      "bullets": [
+        "Deliver production systems used by real businesses",
+        "Build secure, multi-tenant, role-based platforms",
+        "Design for real operational pressure, not just happy paths",
+        "Own the full lifecycle including architecture, security, deployment, and UX",
+        "Integrate external services reliably in time-critical workflows"
+      ],
+      "body": [
+        "It reflects how I approach building software that must work on event day, not just look good in a demo."
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "production",
+    "live": true,
+    "usedBy": "Event-settings company running real live events",
+    "criticality": "Operational system used during live events with real guests"
+  },
+
+  "links": {
+    "website": null,
+    "github": null,
+    "caseStudy": null
+  }
+}

@@ -4,16 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '*.w3schools.com',
-      },
-    ],
+    // Allow local images from public folder
+    unoptimized: false,
   },
 };
 

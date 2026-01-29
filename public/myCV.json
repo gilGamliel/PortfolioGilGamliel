@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "slug": "about",
+    "title": "About Me",
+    "subtitle": "Full-Stack • Mobile (iOS/Android) • AI Systems",
+    "category": "website",
+    "type": "profile",
+    "shortDescription": "Full-stack and mobile developer building production-grade web and iOS/Android apps, with experience in AI agent systems."
+  },
+  "content": [
+    {
+      "type": "about",
+      "title": "About Me",
+      "body": [
+        "I’m a full-stack and mobile software developer with hands-on experience building production-grade web and mobile applications from end to end. I work across backend systems, frontend dashboards, and iOS & Android apps, with a strong focus on clean architecture, reliability, and real-world usability.",
+        "I’m a Computer Science graduate from Ben-Gurion University of the Negev, and I worked as a Full-Stack Engineer at Intera, where I developed and maintained scalable systems used by real customers in production environments.",
+        "My skill set includes React, Next.js, React Native, Node.js, TypeScript, Firebase, PostgreSQL, and REST APIs, along with experience integrating third-party services and building secure authentication and authorization flows. I also work extensively with AI-powered systems, including prompt engineering and agent-based architectures, and use tools like GitHub Copilot and Codex as part of my daily development workflow.",
+        "I enjoy taking ownership of complex systems — from idea and architecture to deployment and iteration — and building software that is not only functional, but stable, maintainable, and ready for real users."
+      ]
+    }
+  ],
+  "links": {
+    "linkedin": "https://linkedin.com/in/gilgamliel",
+    "github": "https://github.com/gilgamliel"
+  }
+}

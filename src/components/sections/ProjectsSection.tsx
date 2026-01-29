@@ -1,11 +1,11 @@
-import { Project } from '@/types';
+import { NormalizedProject } from '@/types';
 import { Section, HorizontalScroller } from '@/components/ui';
 import { ProjectCard } from '@/components/projects';
 
 interface ProjectsSectionProps {
   title: string;
   subtitle?: string;
-  projects: Project[];
+  projects: NormalizedProject[];
   id?: string;
 }
 
@@ -18,7 +18,7 @@ export function ProjectsSection({
   projects,
   id,
 }: ProjectsSectionProps) {
-  if (projects.length === 0) {
+  if (!projects || projects.length === 0) {
     return null;
   }
 

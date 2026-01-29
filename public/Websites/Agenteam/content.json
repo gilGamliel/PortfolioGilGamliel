@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "slug": "agenteam",
+    "title": "AgenTeam – AI-Powered Communication Agents Platform",
+    "subtitle": "Full-Stack System Design, Backend, Frontend, Real-Time Infrastructure & AI Integration",
+    "category": "websites",
+    "type": "fullstack",
+    "shortDescription": "A full-stack platform for building and operating AI-powered communication agents that handle real phone calls and business workflows automatically."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Project Overview",
+      "body": [
+        "AgenTeam is a full-stack platform designed to create, manage, and operate AI-powered communication agents that handle real phone calls, conversations, and business workflows automatically.",
+        "The system enables businesses to deploy intelligent agents for sales, support, appointment scheduling, attendance confirmations, and information delivery — without human operators.",
+        "This project demonstrates end-to-end product development, including authentication, dashboards, real-time communication, AI orchestration, billing logic, and administrative tooling."
+      ]
+    },
+
+    {
+      "type": "capabilities",
+      "title": "Core Features & Capabilities",
+      "sections": [
+        {
+          "subtitle": "User Authentication & Authorization",
+          "items": [
+            "Secure user authentication system",
+            "Support for email and password login and OAuth using Google Sign-In",
+            "Token-based authentication using JWT",
+            "Role-based access control",
+            "Company-level authorization allowing users to belong to and manage multiple companies",
+            "Protected routes on both frontend and backend"
+          ]
+        },
+        {
+          "subtitle": "Company & User Management",
+          "items": [
+            "Users can create and manage multiple companies",
+            "Each company has its own agents, call jobs, usage statistics, and credits balance",
+            "Clear separation of data between companies using a multi-tenant architecture"
+          ]
+        },
+        {
+          "subtitle": "AI Agent System",
+          "body": [
+            "The platform includes a highly configurable AI agent system designed for real-world voice interactions and business automation.",
+            "Throughout development, I worked extensively with a wide range of AI model types — including Hugging Face open-source models, local and self-hosted models via Ollama, and cloud-based API models — testing and comparing them across multiple scenarios to achieve the best balance of latency, accuracy, naturalness, and cost.",
+            "This iterative experimentation allowed me to fine-tune prompts, context handling, and response strategies for production-grade performance in live phone calls."
+          ],
+          "items": [
+            "Clearly defined roles such as sales, customer support, appointment scheduling, and attendance confirmation",
+            "Behavioral rules and response constraints tailored to business goals",
+            "Conversation guidelines optimized specifically for natural, human-like phone speech",
+            "Dynamic reasoning without rigid or pre-written scripts"
+          ]
+        },
+        {
+          "subtitle": "Advanced Agent Runtime Capabilities",
+          "items": [
+            "Turn-based conversation flow management",
+            "Handling user interruptions during speech",
+            "Clarification and disambiguation logic",
+            "Context-aware decision making across the entire call lifecycle"
+          ]
+        },
+        {
+          "subtitle": "Action-Capable AI Agents (MCP-Style)",
+          "items": [
+            "Managing and booking calendar appointments",
+            "Updating and modifying database fields in real time",
+            "Recording structured call outcomes such as confirmations, counts, and notes",
+            "Triggering CRM-like actions and custom business workflows"
+          ],
+          "body": [
+            "This architecture allows AI agents to move beyond passive conversation and function as autonomous, action-capable systems that both communicate naturally and execute meaningful business operations."
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "realtime",
+      "title": "Real-Time Voice Calls & Streaming",
+      "bullets": [
+        "Full real-time phone call handling",
+        "Integration with telephony providers using a Twilio-style architecture",
+        "Live WebSocket streaming between phone audio, speech-to-text, AI inference, and text-to-speech",
+        "Voice Activity Detection and silence handling",
+        "Accurate call state management including start, interruption, resume, and end",
+        "Call recording support and post-call processing"
+      ]
+    },
+
+    {
+      "type": "speech_pipeline",
+      "title": "Speech & AI Pipeline",
+      "sections": [
+        {
+          "subtitle": "Speech-to-Text (STT)",
+          "items": [
+            "Whisper-based models",
+            "Streaming transcription",
+            "Batch transcription"
+          ]
+        },
+        {
+          "subtitle": "Text-to-Speech (TTS)",
+          "items": [
+            "Multiple providers including Azure, Google, ElevenLabs, and OpenAI-style APIs",
+            "Optimized phrasing for natural spoken output"
+          ]
+        },
+        {
+          "subtitle": "AI Inference Orchestration",
+          "items": [
+            "System prompts",
+            "Context compilation per call",
+            "Memory handling",
+            "Tool invocation rules"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "automation",
+      "title": "Call Jobs & Automation",
+      "body": [
+        "The platform includes a call jobs system designed for bulk calling, scheduled calls, and retry logic."
+      ],
+      "sections": [
+        {
+          "subtitle": "Call Job Tracking",
+          "items": [
+            "Status",
+            "Results",
+            "Agent decisions",
+            "Structured outcomes such as yes/no/maybe responses, counts, and notes",
+            "Automatic post-call summarization and data updates"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "dashboard",
+      "title": "User Dashboard (Frontend App)",
+      "bullets": [
+        "View companies and agents",
+        "Create and edit agents",
+        "Launch call jobs",
+        "Monitor live and historical calls",
+        "View usage statistics",
+        "Responsive design",
+        "Internationalization support with LTR and RTL layouts including Hebrew",
+        "Clear UX separation between business logic and presentation"
+      ]
+    },
+
+    {
+      "type": "billing",
+      "title": "Billing & Credit System",
+      "bullets": [
+        "Token-based usage system",
+        "Custom billing logic with fixed cost per call",
+        "Credit consumption tracking"
+      ]
+    },
+
+    {
+      "type": "admin",
+      "title": "Admin Dashboard",
+      "bullets": [
+        "Monitoring users and companies",
+        "Viewing system-wide usage",
+        "Managing credits and limits",
+        "Reviewing call logs and recordings",
+        "Tools for debugging, auditing, and platform oversight"
+      ]
+    },
+
+    {
+      "type": "quality",
+      "title": "App Review & Quality Controls",
+      "bullets": [
+        "Call review system including transcripts, audio recordings, and AI decision traces",
+        "Error handling and fallback mechanisms",
+        "Rate limiting and abuse prevention",
+        "Logging and monitoring hooks"
+      ]
+    },
+
+    {
+      "type": "architecture",
+      "title": "Technical Architecture",
+      "sections": [
+        {
+          "subtitle": "Backend",
+          "items": [
+            "Node.js and TypeScript",
+            "Modular service-based architecture",
+            "REST APIs and WebSocket real-time servers",
+            "Authentication middleware",
+            "Rate limiting and security layers",
+            "Clear separation between runtime logic, AI orchestration, and call lifecycle management",
+            "Shared types package for frontend and backend consistency"
+          ]
+        },
+        {
+          "subtitle": "Frontend",
+          "items": [
+            "React and TypeScript",
+            "Component-based UI architecture",
+            "Dashboard-oriented design",
+            "State management for authentication, companies, agents, and calls",
+            "Localization using i18n with RTL and LTR support"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "engineering_challenges",
+      "title": "Infrastructure Experiments & Engineering Challenges",
+      "body": [
+        "During development, I explored running large language models locally as part of the AI agent pipeline.",
+        "While this approach provided strong control and privacy, it introduced challenges around GPU availability, memory constraints, cold starts, and inference latency when scaling beyond local environments.",
+        "To address these limitations, I experimented with deploying LLM workloads on cloud-based GPU instances, running models inside containerized pods backed by dedicated graphics cards.",
+        "This allowed me to compare local inference against cloud-hosted GPU execution in terms of performance, cost, reliability, and operational complexity."
+      ],
+      "bullets": [
+        "When to rely on self-hosted or local models versus managed API-based models",
+        "How to design the agent runtime to remain model-agnostic",
+        "Balancing inference latency with scalability and operational overhead"
+      ],
+      "bodyEnd": [
+        "This process reinforced a flexible, provider-agnostic architecture that allows the system to evolve as model capabilities, infrastructure costs, and deployment requirements change."
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "Project Intent & Value",
+      "body": [
+        "AgenTeam was built to solve real operational problems in businesses that rely on phone communication — replacing repetitive human calls with intelligent, reliable AI agents."
+      ],
+      "bullets": [
+        "Full-stack ownership",
+        "Real-time systems design",
+        "AI integration in production workflows",
+        "Complex state management",
+        "Scalable, multi-tenant architecture"
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "advanced-development",
+    "live": false,
+    "criticality": "Complex real-time AI system handling live phone calls and business workflows"
+  },
+
+  "links": {
+    "website": "agenteam.co",
+    "github": null,
+    "caseStudy": null
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "slug": "personaltime",
+    "title": "PersonalTime – iOS & Android On-Demand Expert Time Marketplace (In Development)",
+    "subtitle": null,
+    "category": "apps",
+    "type": "mobile",
+    "shortDescription": "A cross-platform iOS and Android marketplace app for booking short, paid one-on-one video sessions with experts and public figures."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Overview",
+      "body": [
+        "PersonalTime is a cross-platform iOS and Android mobile application currently under active development.",
+        "The app enables users to book short, paid, one-on-one video sessions with experts, professionals, and public figures (“Suppliers of Time”).",
+        "The product is being built as a scalable marketplace and real-time interaction platform, not just a scheduling tool, with a strong focus on retention, discovery, and repeat usage.",
+        "I am designing and implementing the entire system end-to-end, including mobile applications, backend services, authentication, scheduling logic, real-time sessions, and admin tooling."
+      ]
+    },
+
+    {
+      "type": "status",
+      "title": "Current Development Status",
+      "bullets": [
+        "iOS & Android apps built with a shared codebase",
+        "Core user flows fully implemented",
+        "Authentication, booking, and dashboards in place",
+        "Live video session flow implemented and under iteration",
+        "Admin and supplier tools actively evolving",
+        "Pre-launch stage (not yet deployed to App Store / Play Store)"
+      ],
+      "body": [
+        "This project is actively evolving, with architecture and features designed to support production-scale deployment."
+      ]
+    },
+
+    {
+      "type": "mobile_focus",
+      "title": "Mobile App Focus (iOS & Android)",
+      "body": [
+        "The platform is built mobile-first, optimized for real usage on phones:"
+      ],
+      "bullets": [
+        "Native-feeling UX for iOS and Android",
+        "Real-time interactions and notifications",
+        "Short-session booking optimized for quick decisions",
+        "Touch-first dashboards for users and suppliers",
+        "Fully supports RTL & LTR layouts (Hebrew & English)"
+      ]
+    },
+
+    {
+      "type": "auth",
+      "title": "Authentication & User Management",
+      "body": [
+        "The mobile app includes a complete authentication system:"
+      ],
+      "sections": [
+        {
+          "subtitle": "Authentication",
+          "items": [
+            "Firebase Authentication (email / phone / token-based)",
+            "Secure token validation between app and backend"
+          ]
+        },
+        {
+          "subtitle": "Role-based access",
+          "items": [
+            "Users",
+            "Suppliers",
+            "Admins"
+          ]
+        },
+        {
+          "subtitle": "Account lifecycle handling",
+          "items": [
+            "Signup / login",
+            "Session persistence",
+            "Soft deletion",
+            "Audit metadata (created, updated, last login)"
+          ]
+        }
+      ],
+      "bodyEnd": [
+        "All backend endpoints enforce strict ownership and permission checks."
+      ]
+    },
+
+    {
+      "type": "user_dashboard",
+      "title": "User Dashboard (Mobile App)",
+      "body": [
+        "Users access a personalized in-app dashboard that includes:"
+      ],
+      "bullets": [
+        "Upcoming and past sessions",
+        "Booking status tracking",
+        "Direct access to live video calls",
+        "Session history with pricing and duration",
+        "Ratings and post-call reviews",
+        "Notifications and reminders"
+      ],
+      "bodyEnd": [
+        "Designed for speed, clarity, and frequent use on mobile."
+      ]
+    },
+
+    {
+      "type": "supplier_dashboard",
+      "title": "Supplier Dashboard (Mobile App)",
+      "body": [
+        "Suppliers manage their activity directly from the app:"
+      ],
+      "bullets": [
+        "Profile and expertise management",
+        "Availability scheduling",
+        "Online / offline presence control",
+        "Upcoming session management",
+        "Earnings and session analytics",
+        "Ratings and feedback overview"
+      ],
+      "bodyEnd": [
+        "Suppliers can go online instantly and start receiving bookings without manual coordination."
+      ]
+    },
+
+    {
+      "type": "scheduling",
+      "title": "Booking & Scheduling System",
+      "body": [
+        "The scheduling engine supports:"
+      ],
+      "bullets": [
+        "Adjustable sessions length",
+        "Time-zone aware availability",
+        "Overlap and conflict prevention",
+        "Status-based session lifecycle",
+        "Cancellation and refund logic",
+        "Session countdowns and enforcement"
+      ],
+      "bodyEnd": [
+        "Business logic is isolated, testable, and built to scale."
+      ]
+    },
+
+    {
+      "type": "video_sessions",
+      "title": "Live Video Sessions",
+      "body": [
+        "The app includes an integrated real-time interaction layer:"
+      ],
+      "bullets": [
+        "In-app video calls",
+        "Time-restricted session access",
+        "Countdown timers and automatic session termination",
+        "Post-call review flow"
+      ],
+      "bodyEnd": [
+        "Session access is tightly coupled to booking state and user identity."
+      ]
+    },
+
+    {
+      "type": "admin_tools",
+      "title": "Admin & Internal Tools",
+      "body": [
+        "An internal admin system is being developed to support:"
+      ],
+      "bullets": [
+        "User and supplier management",
+        "Session oversight",
+        "Manual interventions and dispute handling",
+        "Platform analytics",
+        "Audit logs for sensitive actions"
+      ]
+    },
+
+    {
+      "type": "tech_stack",
+      "title": "Technology Stack",
+      "sections": [
+        {
+          "subtitle": "Mobile",
+          "items": [
+            "React Native (Expo)",
+            "TypeScript",
+            "Shared iOS & Android codebase",
+            "RTL / LTR support"
+          ]
+        },
+        {
+          "subtitle": "Backend",
+          "items": [
+            "Node.js",
+            "TypeScript",
+            "REST APIs",
+            "Firebase Admin SDK",
+            "Firestore (structured collections, audit logs, soft deletes)"
+          ]
+        },
+        {
+          "subtitle": "Auth & Security",
+          "items": [
+            "Firebase Authentication",
+            "Token-based authorization",
+            "Role-based permissions",
+            "Ownership validation",
+            "Rate limiting",
+            "Environment-based configs",
+            "Modular, scalable architecture"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "ownership",
+      "title": "I am fully responsible for",
+      "bullets": [
+        "Product and system architecture",
+        "Mobile app development (iOS & Android)",
+        "Backend and database design",
+        "Authentication and security",
+        "Booking and scheduling logic",
+        "Real-time session flow",
+        "Admin tooling",
+        "Testing and pre-launch preparation"
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "Closing",
+      "body": [
+        "This project demonstrates my ability to design and build a complex, real-time mobile marketplace from scratch, with production-grade architecture—even before public deployment."
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "in-development",
+    "live": false,
+    "storeDeployment": "Pre-launch stage (not yet deployed to App Store / Play Store)"
+  },
+
+  "links": {
+    "website": null,
+    "github": null,
+    "appStore": null,
+    "playStore": null
+  }
+}

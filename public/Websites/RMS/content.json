@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "slug": "rms",
+    "title": "RMS – Production Robot Management System",
+    "subtitle": "Full-Stack Ownership • Live Production • Robotics & Automation",
+    "category": "websites",
+    "type": "fullstack",
+    "shortDescription": "A production-grade robot management system actively used by hotels to control autonomous service robots in real environments."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Overview",
+      "body": [
+        "RMS (Robot Management System) is a production-grade, enterprise-level platform that I designed, built, and deployed as part of my work at the company.",
+        "The system is live in production and is actively used by 5+ hotels to manage their robotic fleets, handle robot calls, and automate real-world operational tasks.",
+        "RMS is a mission-critical system that directly controls physical robots operating in hospitality environments and supports 24/7 reliability.",
+        "This project is not a demo, prototype, or academic exercise — it is a real business system, used daily by real customers."
+      ]
+    },
+
+    {
+      "type": "purpose",
+      "title": "Project Purpose & Business Impact",
+      "body": [
+        "The purpose of RMS is to provide hotels with a centralized, secure, and scalable control platform for managing service robots across multiple hotels and locations.",
+        "RMS enables dispatching robot calls and operational tasks in real time, automating robot actions based on live external data, monitoring robot state, availability, and execution, and enforcing strict security, permissions, and auditability.",
+        "RMS bridges the gap between software systems and physical robotics, enabling hotels to operate robots efficiently, safely, and at scale."
+      ]
+    },
+
+    {
+      "type": "real_world_usage",
+      "title": "Real-World Production Usage",
+      "bullets": [
+        "Deployed across multiple hotels",
+        "Controls live robots in real environments",
+        "Handles robot calls, task orchestration, and automation",
+        "Designed for continuous operation and operational stability",
+        "Maintained and evolved based on real customer needs"
+      ]
+    },
+
+    {
+      "type": "capabilities",
+      "title": "Core System Capabilities",
+      "sections": [
+        {
+          "subtitle": "Robot & Machine Management",
+          "items": [
+            "Centralized management of robots and machines",
+            "Assignment of robots to hotels, locations, and zones",
+            "Tracking robot availability and operational state",
+            "Support for multi-hotel, multi-robot deployments"
+          ]
+        },
+        {
+          "subtitle": "Robot Calls & Task Orchestration",
+          "items": [
+            "Creation and dispatch of robot calls from the dashboard",
+            "Task lifecycle management including Created, Dispatched, In progress, and Completed / Failed states",
+            "Safe handling of concurrent robot requests",
+            "Prevention of task collisions and invalid dispatches"
+          ]
+        },
+        {
+          "subtitle": "Third-Party Robotics Integration",
+          "items": [
+            "Deep production integration with Yunji Technology, a Chinese company specializing in autonomous hospitality robots",
+            "Secure communication with Yunji robot APIs",
+            "Dispatching robot commands and operational tasks",
+            "Mapping RMS business logic to vendor-specific robot commands",
+            "Fetching robot status and availability",
+            "Synchronizing robot state with backend systems",
+            "Supporting multiple robots per hotel and per location"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "vendor_agnostic",
+      "title": "Vendor-Agnostic Design",
+      "body": [
+        "The system is designed to be vendor-agnostic, allowing future robot providers to be integrated without rewriting business logic."
+      ]
+    },
+
+    {
+      "type": "automation",
+      "title": "Automation & Web-Driven Task Pipelines",
+      "body": [
+        "RMS includes a dedicated automation layer that enables robots to act based on live external information."
+      ],
+      "sections": [
+        {
+          "subtitle": "Automation Flow",
+          "items": [
+            "Puppeteer-based web automation and scraping",
+            "Extraction of data from external web systems",
+            "Validation and normalization of scraped data",
+            "Conversion of data into structured robot tasks",
+            "Secure dispatch of tasks to robots via backend APIs",
+            "End-to-end pipeline: External Web Source → Automation (Puppeteer) → RMS Backend Processing → Robot Task Dispatch → Physical Robot Execution"
+          ]
+        },
+        {
+          "subtitle": "Automation Outcome",
+          "items": [
+            "Allows robots to perform dynamic, data-driven actions, not static or manual commands"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "security",
+      "title": "Authentication, Authorization & Security",
+      "body": [
+        "Security was a core design principle, not an afterthought.",
+        "Firebase Authentication is used as the identity provider, with ID tokens verified on every request.",
+        "Strict ownership-based authorization is enforced server-side.",
+        "Users can only access entities they own or are assigned to.",
+        "All permission checks are validated in the backend.",
+        "Role-aware access is enforced for admin, operator, and scoped users.",
+        "Rate limiting and request validation are applied.",
+        "The system includes protection against unauthorized access and privilege escalation."
+      ]
+    },
+
+    {
+      "type": "dashboard",
+      "title": "Admin Dashboard & Operational UI",
+      "bullets": [
+        "User and access management",
+        "Robot and machine control",
+        "Live robot call monitoring",
+        "Task execution visibility",
+        "Operational data inspection",
+        "Soft deletion with full history preservation"
+      ],
+      "body": [
+        "The UI is optimized for clarity, speed, and operational efficiency, not just appearance."
+      ]
+    },
+
+    {
+      "type": "audit",
+      "title": "Audit, Logging & Accountability",
+      "body": [
+        "RMS was built with production accountability and traceability in mind."
+      ],
+      "sections": [
+        {
+          "subtitle": "Audit Capabilities",
+          "items": [
+            "Dedicated UserActions and audit logging system",
+            "Full tracking of authentication events",
+            "Tracking of robot calls and task dispatches",
+            "Tracking of entity creation, updates, and deletions",
+            "Soft-delete support with metadata including who, when, and why",
+            "Enables debugging, compliance, and operational transparency"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "architecture",
+      "title": "Architecture & Technology Stack",
+      "sections": [
+        {
+          "subtitle": "Backend",
+          "items": [
+            "Node.js",
+            "Express",
+            "Firebase Admin SDK",
+            "Firestore",
+            "RESTful API architecture",
+            "Modular structure with controllers, services, routes, and middleware",
+            "Secure authorization middleware",
+            "Automation services integrated into backend workflows"
+          ]
+        },
+        {
+          "subtitle": "Automation",
+          "items": [
+            "Puppeteer",
+            "Headless browser automation",
+            "Web scraping pipelines",
+            "Task generation and dispatch logic",
+            "Robust error handling and retries"
+          ]
+        },
+        {
+          "subtitle": "Frontend",
+          "items": [
+            "React / React Native",
+            "Firebase Authentication integration",
+            "Secure API communication using ID tokens",
+            "Dashboard-oriented UI architecture"
+          ]
+        },
+        {
+          "subtitle": "Engineering Practices",
+          "items": [
+            "Environment-based configuration",
+            "Clear separation of concerns",
+            "Defensive programming for production failures",
+            "Scalable and extensible data model",
+            "Designed for long-term maintainability"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "ownership",
+      "title": "My Role & Ownership",
+      "bullets": [
+        "System architecture and data modeling",
+        "Backend API design and security",
+        "Authentication and authorization strategy",
+        "Third-party robotics API integration",
+        "Automation and scraping pipelines",
+        "Robot task orchestration",
+        "Dashboard and operational tooling",
+        "Production deployment, monitoring, and maintenance",
+        "Supporting real customers in live hotel environments"
+      ],
+      "body": [
+        "This role required full ownership, production responsibility, and direct interaction with real operational constraints."
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "What This Project Demonstrates",
+      "bullets": [
+        "Build and own real production systems",
+        "Design secure, scalable, and auditable architectures",
+        "Integrate software with physical robotics",
+        "Automate complex workflows using live web data",
+        "Deliver systems that are actively used by real businesses",
+        "Operate and maintain mission-critical software in production"
+      ],
+      "body": [
+        "RMS reflects my approach as a full-stack engineer with a production mindset, capable of taking systems from concept to real-world deployment and long-term operation."
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "production",
+    "live": true,
+    "usedBy": "5+ hotels",
+    "criticality": "Mission-critical system controlling physical robots"
+  },
+
+  "links": {
+    "website": null,
+    "github": null,
+    "caseStudy": null
+  }
+}

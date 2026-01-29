@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "slug": "safesail",
+    "title": "SafeSail – Intelligent Marine Conditions & Decision-Support Platform",
+    "subtitle": null,
+    "category": "apps",
+    "type": "mobile",
+    "shortDescription": "A full-stack, AI-assisted mobile application that helps sea-goers make safer decisions based on real-time marine and weather data."
+  },
+
+  "media": {
+    "video": null,
+    "images": []
+  },
+
+  "content": [
+    {
+      "type": "overview",
+      "title": "Overview",
+      "body": [
+        "SafeSail is a full-stack, AI-assisted mobile application designed to help boat owners, sailors, surfers, and sea-goers make safer and smarter decisions before going out to sea.",
+        "The core goal of the system is to transform complex marine and weather data into a clear, actionable recommendation — answering a simple but critical question:",
+        "“Is it a good day to go out to sea for my specific vessel type?”",
+        "SafeSail combines real-time marine data, atmospheric weather forecasts, vessel-specific safety rules, and time-based sea condition insights."
+      ]
+    },
+
+    {
+      "type": "capabilities",
+      "title": "Key Product Capabilities",
+      "sections": [
+        {
+          "subtitle": "Intelligent Sea Condition Scoring",
+          "body": [
+            "Each time window receives a composite sea condition score."
+          ],
+          "items": [
+            "Wind speed and gusts",
+            "Wave height and wave period",
+            "Swell height, direction, and period",
+            "Rain, pressure, visibility, and temperature"
+          ],
+          "bodyEnd": [
+            "The score is mapped to a clear recommendation: Not Recommended, Moderate, or Recommended."
+          ]
+        },
+        {
+          "subtitle": "Vessel- & Location-Aware Scoring",
+          "body": [
+            "Sea condition scoring is dynamically adjusted by location and vessel type, ensuring that forecasts reflect local marine characteristics and the operational limits of:"
+          ],
+          "items": [
+            "Speed boats",
+            "Sailboats",
+            "Surfboards",
+            "Kayaks",
+            "Personal watercraft"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "forecasting",
+      "title": "Time-Based Forecasting UX",
+      "sections": [
+        {
+          "subtitle": "Daily Overview",
+          "items": [
+            "Morning, Noon, and Evening large time blocks",
+            "Instant “go / no-go” understanding for the entire day",
+            "Automatic highlighting of the best time window"
+          ]
+        },
+        {
+          "subtitle": "Detailed Intraday Breakdown",
+          "items": [
+            "Three-hour timeframes such as 06–09 and 09–12",
+            "Per-timeframe sea condition score",
+            "Detailed wind, wave, and swell values",
+            "Visual trend graphs for wind speed and wave height"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "personalization",
+      "title": "Personalized Experience",
+      "bullets": [
+        "Users select a preferred beach or location",
+        "Users choose a vessel type, which directly affects scoring logic",
+        "All recommendations adapt automatically to user preferences"
+      ]
+    },
+
+    {
+      "type": "i18n",
+      "title": "Internationalization & RTL / LTR Support",
+      "body": [
+        "Full bilingual support for Hebrew and English.",
+        "Automatic RTL and LTR layout switching based on the selected language.",
+        "Localized text, navigation flow, icons, charts, and alignment.",
+        "Designed to feel native in both left-to-right and right-to-left environments."
+      ],
+      "bullets": [
+        "UX maturity",
+        "Global readiness",
+        "Attention to detail beyond “just translating strings”"
+      ]
+    },
+
+    {
+      "type": "notifications",
+      "title": "Smart Notifications",
+      "body": [
+        "Background jobs analyze forecasts daily."
+      ],
+      "bullets": [
+        "Users receive notifications when their preferred beach has ideal conditions",
+        "Notifications are sent when conditions align with the user’s selected vessel’s optimal ranges"
+      ]
+    },
+
+    {
+      "type": "auth",
+      "title": "Full Authentication & User Management",
+      "sections": [
+        {
+          "subtitle": "User Authentication",
+          "items": [
+            "Secure login using Firebase Authentication",
+            "Token-based authorization between frontend and backend",
+            "Protected API access per user"
+          ]
+        },
+        {
+          "subtitle": "User Profiles",
+          "items": [
+            "Preferred beach",
+            "Vessel type",
+            "Notification preferences",
+            "Device metadata for push notifications"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "admin",
+      "title": "Admin Dashboard & Internal Tools",
+      "body": [
+        "SafeSail includes internal admin capabilities, built for maintainability and future scaling:"
+      ],
+      "bullets": [
+        "Admin dashboard",
+        "Manage beaches including coordinates, regions, and activation",
+        "Manage vessel types and scoring thresholds",
+        "Inspect forecast data per location and timeframe",
+        "Review scoring outputs"
+      ]
+    },
+
+    {
+      "type": "backend",
+      "title": "Backend Architecture",
+      "body": [
+        "The backend is designed for scalability, clarity, and automation."
+      ],
+      "sections": [
+        {
+          "subtitle": "Data Ingestion Pipeline",
+          "items": [
+            "Scheduled cron jobs",
+            "Fetching marine data from StormGlass",
+            "Fetching atmospheric data from WeatherAPI",
+            "Normalization and merging of data into a unified forecast model",
+            "Automatic generation of timeframes and daily blocks"
+          ]
+        },
+        {
+          "subtitle": "AI-Assisted Scoring System",
+          "body": [
+            "The scoring system is rule-based and explainable.",
+            "Vessel-specific optimal ranges are defined in structured tables.",
+            "Deviations are penalized consistently.",
+            "The system produces deterministic and transparent results."
+          ],
+          "items": [
+            "Trustworthiness",
+            "Predictability",
+            "Safety-first decision making"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "tech_stack",
+      "title": "Technology Stack",
+      "sections": [
+        {
+          "subtitle": "Frontend",
+          "items": [
+            "React Native (Expo)",
+            "TypeScript",
+            "Modern component-based UI",
+            "Optimized for outdoor and marine use cases",
+            "Charts and visual indicators for quick readability"
+          ]
+        },
+        {
+          "subtitle": "Backend",
+          "items": [
+            "Node.js",
+            "Firebase Firestore",
+            "Firebase Authentication",
+            "Cloud Functions and scheduled jobs"
+          ]
+        },
+        {
+          "subtitle": "APIs",
+          "items": [
+            "StormGlass for marine conditions",
+            "WeatherAPI for atmospheric conditions"
+          ]
+        },
+        {
+          "subtitle": "DevOps & Tooling",
+          "items": [
+            "Expo EAS build system",
+            "TestFlight pipeline",
+            "Google Play Console pipeline",
+            "Environment-based configuration",
+            "Production logging and monitoring"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "closing",
+      "title": "Why This Project Matters",
+      "body": [
+        "SafeSail is not just a weather app — it is a decision-support system."
+      ],
+      "bullets": [
+        "Full-stack ownership from UX to data pipelines",
+        "Real-world API integration challenges",
+        "Scalable backend design",
+        "Deterministic AI logic for safety-critical domains",
+        "Product thinking beyond “just code”"
+      ],
+      "bodyEnd": [
+        "This project reflects my ability to design and build end-to-end systems, translate real-world problems into scalable software, combine UX, backend architecture, data modeling, and automation, and own a product from idea to production to app store review.",
+        "SafeSail represents how I approach software: clear intent, strong architecture, and real user value."
+      ]
+    }
+  ],
+
+  "status": {
+    "stage": "production",
+    "live": true,
+    "criticality": "Decision-support system for safety-critical marine activities"
+  },
+
+  "links": {
+    "website": "safesail.app",
+    "github": null,
+    "appStore": null,
+    "playStore": null
+  }
+}
