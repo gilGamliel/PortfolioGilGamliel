@@ -1,8 +1,8 @@
-import { Hero, ProjectsSection } from '@/components';
+import { Hero, About, ProjectsSection, Contact } from '@/components';
 import { getWebsiteProjects, getAppProjects } from '@/lib/content';
 
 /**
- * Homepage - displays hero section and project carousels
+ * Homepage - displays hero, about, projects, and contact sections
  * All data is loaded from public folder JSON files
  */
 export default function HomePage() {
@@ -11,27 +11,37 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero / About Section - loads from myCV.json */}
+      {/* Hero Section - Name, title, value statement, CTAs */}
       <Hero />
+
+      {/* About Section - Intro and highlight bullets */}
+      <About />
 
       {/* Projects Sections */}
       <div id="projects" className="scroll-mt-20">
         {/* Full-Stack / Website Projects */}
-        <ProjectsSection
-          id="websites-projects"
-          title="Full-Stack Projects"
-          subtitle="End-to-end solutions built with modern technologies"
-          projects={websiteProjects}
-        />
+        {websiteProjects.length > 0 && (
+          <ProjectsSection
+            id="websites-projects"
+            title="Full-Stack Projects"
+            subtitle="End-to-end solutions built with modern technologies"
+            projects={websiteProjects}
+          />
+        )}
 
         {/* Mobile App Projects */}
-        <ProjectsSection
-          id="apps-projects"
-          title="Mobile Apps"
-          subtitle="Native and cross-platform mobile applications"
-          projects={appProjects}
-        />
+        {appProjects.length > 0 && (
+          <ProjectsSection
+            id="apps-projects"
+            title="Mobile Apps"
+            subtitle="Native and cross-platform mobile applications"
+            projects={appProjects}
+          />
+        )}
       </div>
+
+      {/* Contact Section */}
+      <Contact />
     </>
   );
 }

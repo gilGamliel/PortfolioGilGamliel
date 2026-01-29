@@ -9,19 +9,19 @@ interface BaseButtonProps {
   size?: ButtonSize;
   className?: string;
   children: ReactNode;
+  onClick?: () => void;
 }
 
 interface ButtonAsButton extends BaseButtonProps {
   href?: never;
-  onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  external?: never;
 }
 
 interface ButtonAsLink extends BaseButtonProps {
   href: string;
   external?: boolean;
-  onClick?: never;
   type?: never;
   disabled?: never;
 }
@@ -61,7 +61,7 @@ export function Button({
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if ('href' in props && props.href) {
-    const { href, external } = props;
+    const { href, external, onClick } = props;
     
     if (external) {
       return (
@@ -70,6 +70,7 @@ export function Button({
           target="_blank"
           rel="noopener noreferrer"
           className={combinedClasses}
+          onClick={onClick}
         >
           {children}
         </a>
@@ -77,7 +78,7 @@ export function Button({
     }
 
     return (
-      <Link href={href} className={combinedClasses}>
+      <Link href={href} className={combinedClasses} onClick={onClick}>
         {children}
       </Link>
     );

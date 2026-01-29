@@ -8,4 +8,7 @@ export { Section, Button, Tag, TagList, HorizontalScroller } from './ui';
 export { ProjectCard, ProjectMedia, ProjectDetails } from './projects';
 
 // Section components
-export { Hero, ProjectsSection } from './sections';
+export { Hero, About, ProjectsSection, Contact } from './sections';
+
+// Analytics
+export { AnalyticsInit } from './AnalyticsInit';

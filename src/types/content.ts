@@ -14,17 +14,21 @@ export interface ProfileMeta {
   category: string;
   type: string;
   shortDescription: string;
+  tagline?: string;
 }
 
 export interface ProfileContentSection {
   type: 'about';
   title: string;
+  intro?: string;
+  highlights?: string[];
   body: string[];
 }
 
 export interface ProfileLinks {
   linkedin?: string;
   github?: string;
+  email?: string;
 }
 
 export interface ProfileData {

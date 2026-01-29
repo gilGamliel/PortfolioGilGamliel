@@ -1,7 +1,13 @@
 import Link from 'next/link';
+import { getProfileData } from '@/lib/content';
+import { FooterLinks } from './FooterLinks';
 
+/**
+ * Footer component - Server-side rendered with client-side analytics
+ */
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const profile = getProfileData();
+  const links = profile?.links;
 
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
@@ -10,11 +16,11 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-              Portfolio
+              {profile?.meta.title || 'Portfolio'}
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Full-Stack & Mobile App Developer building production-grade
-              solutions.
+              {profile?.meta.shortDescription ||
+                'Full-Stack & Mobile Developer building production-grade solutions.'}
             </p>
           </div>
 
@@ -51,58 +57,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div id="contact">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-4 uppercase tracking-wider">
-              Get In Touch
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="mailto:gilpsp3g@gmail.com"
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  gilpsp3g@gmail.com
-                </a>
-              </li>
-                            <li>
-                <a
-                  href="callto:+972505268883"
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  050-5268883
-                </a>
-              </li>
-
-              {/* <li>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  GitHub
-                </a>
-              </li> */}
-              <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Contact - Client component for analytics */}
+          <FooterLinks
+            email={links?.email}
+            github={links?.github}
+            linkedin={links?.linkedin}
+          />
         </div>
-
-        {/* <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-center text-sm text-gray-500 dark:text-gray-500">
-            © {currentYear} All rights reserved. Built with Next.js & TypeScript.
-          </p>
-        </div> */}
       </div>
     </footer>
   );

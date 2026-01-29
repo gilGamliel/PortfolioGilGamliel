@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ProjectDetails } from '@/components/projects';
+import { ProjectPageAnalytics } from '@/components/ProjectPageAnalytics';
 import { getProjectBySlug, getAllProjectSlugs, getProjectsByCategory } from '@/lib/content';
 import { ProjectCategory } from '@/types';
 
@@ -72,6 +73,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="min-h-screen">
+      {/* Analytics tracking */}
+      <ProjectPageAnalytics slug={slug} />
+
       {/* Breadcrumb Navigation */}
       <nav className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
