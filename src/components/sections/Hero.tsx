@@ -38,11 +38,11 @@ export function Hero() {
         </h2>
 
         {/* Short Value Statement */}
-        {meta.tagline && (
+        {/* {meta.tagline && (
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             {meta.tagline}
           </p>
-        )}
+        )} */}
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
