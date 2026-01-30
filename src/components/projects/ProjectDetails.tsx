@@ -17,6 +17,10 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
   return (
     <article className="space-y-12">
       {/* Header Section */}
+            {links && (
+        <ProjectLinksSection links={links} />
+      )}
+
       <header className="space-y-4">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
           {title}
@@ -72,9 +76,6 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
       )}
 
       {/* Project Links */}
-      {links && (
-        <ProjectLinksSection links={links} />
-      )}
     </article>
   );
 }

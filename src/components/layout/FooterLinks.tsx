@@ -6,13 +6,14 @@ interface FooterLinksProps {
   email?: string;
   github?: string;
   linkedin?: string;
+  phone?: string;
 }
 
 /**
  * Footer contact links with analytics tracking
  * Client component to enable event tracking
  */
-export function FooterLinks({ email, github, linkedin }: FooterLinksProps) {
+export function FooterLinks({ email, github, linkedin , phone}: FooterLinksProps) {
   const handleGitHubClick = () => {
     trackEvent(AnalyticsEvents.CLICK_GITHUB);
   };
@@ -24,6 +25,10 @@ export function FooterLinks({ email, github, linkedin }: FooterLinksProps) {
   const handleEmailClick = () => {
     trackEvent(AnalyticsEvents.CLICK_EMAIL);
   };
+    const handlePhoneClick = () => {
+    trackEvent(AnalyticsEvents.CLICK_PHONE);
+  };
+
 
   return (
     <div>
@@ -39,6 +44,17 @@ export function FooterLinks({ email, github, linkedin }: FooterLinksProps) {
               className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               {email}
+            </a>
+          </li>
+        )}
+        {phone && (
+          <li>
+            <a
+              href={`callto:${phone}`}
+              onClick={handlePhoneClick}
+              className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              {phone}
             </a>
           </li>
         )}

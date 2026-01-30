@@ -57,7 +57,7 @@ export function ContactLinks({ email, github, linkedin  , phone}: ContactLinksPr
         </Button>
       )}
 
-            {phone && (
+            {/* {phone && (
         <Button
           href={`callto:${email}`}
           variant="primary"
@@ -79,7 +79,7 @@ export function ContactLinks({ email, github, linkedin  , phone}: ContactLinksPr
           </svg>
           Call Me
         </Button>
-      )}
+      )} */}
 
       
 

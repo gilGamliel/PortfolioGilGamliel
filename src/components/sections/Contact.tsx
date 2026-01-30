@@ -29,6 +29,7 @@ export function Contact() {
           email={links.email}
           github={links.github}
           linkedin={links.linkedin}
+          phone={links.phone}
         />
       </div>
     </section>
