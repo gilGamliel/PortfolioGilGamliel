@@ -23,16 +23,6 @@
       ]
     },
 
-    {
-      "type": "status",
-      "title": "Product Status & Strategic Decision",
-      "body": [
-        "TicketMarket was successfully built and uploaded to the app distribution pipeline (iOS & Android).",
-        "After several months of development and internal testing, the decision was made to pause and shut down the product in order to reassess long-term business strategy, market positioning, and monetization models.",
-        "This decision was intentional and strategic, not technical.",
-        "The platform architecture was designed to be re-activated in the future, following updated business and go-to-market decisions."
-      ]
-    },
 
     {
       "type": "vision",
