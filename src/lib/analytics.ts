@@ -4,7 +4,7 @@
  */
 
 // Plausible domain - update this to your actual domain
-const PLAUSIBLE_DOMAIN = 'gilgamliel.dev';
+const PLAUSIBLE_DOMAIN = 'gilgamlielportfolio.vercel.app';
 
 declare global {
   interface Window {

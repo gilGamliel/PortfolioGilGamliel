@@ -32,7 +32,7 @@ export default function RootLayout({
         {/* Plausible Analytics - Privacy-friendly, no cookies */}
         <Script
           defer
-          data-domain="gilgamliel.dev"
+          data-domain="gilgamlielportfolio.vercel.app"
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
